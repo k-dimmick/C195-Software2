@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.modifyAppointmentController">
+    <children>
+        <ComboBox fx:id="contactCombo" layoutX="179.0" layoutY="319.0" onAction="#contactComboClick" prefWidth="150.0" />
+        <Label layoutX="50.0" layoutY="78.0" text="Appointment ID" />
+        <Label layoutX="50.0" layoutY="141.0" text="Title" />
+        <Label layoutX="50.0" layoutY="195.0" text="Description" />
+        <Label layoutX="50.0" layoutY="257.0" text="Location" />
+        <Label layoutX="50.0" layoutY="323.0" text="Contact" />
+        <Label layoutX="50.0" layoutY="375.0" text="Type" />
+        <Label layoutX="50.0" layoutY="432.0" text="Start Date &amp; Time" />
+        <Label layoutX="50.0" layoutY="486.0" text="End Date &amp; Time" />
+        <Label layoutX="50.0" layoutY="534.0" text="Customer ID" />
+        <ComboBox fx:id="customerIDCombo" layoutX="179.0" layoutY="530.0" onAction="#customerIDComboClick" prefWidth="150.0" />
+        <TextField fx:id="appointmentIDInput" editable="false" layoutX="174.0" layoutY="74.0" />
+        <TextField fx:id="titleInput" layoutX="174.0" layoutY="137.0" />
+        <TextField fx:id="descriptionInput" layoutX="174.0" layoutY="191.0" />
+        <TextField fx:id="locationInput" layoutX="174.0" layoutY="253.0" />
+        <TextField fx:id="typeInput" layoutX="174.0" layoutY="371.0" />
+        <ComboBox fx:id="startTime" layoutX="468.0" layoutY="428.0" onAction="#startTimeClick" prefHeight="25.0" prefWidth="95.0" promptText="Time" />
+        <ComboBox fx:id="endTime" layoutX="468.0" layoutY="482.0" onAction="#endTimeSelect" prefHeight="25.0" prefWidth="95.0" promptText="Time" />
+        <ComboBox fx:id="startYear" layoutX="166.0" layoutY="428.0" onAction="#startYearClick" prefHeight="25.0" prefWidth="78.0" promptText="Year" />
+        <ComboBox fx:id="startMonth" layoutX="265.0" layoutY="428.0" onAction="#startMonthClick" prefHeight="25.0" prefWidth="92.0" promptText="Month" />
+        <ComboBox fx:id="startDay" layoutX="373.0" layoutY="428.0" onAction="#startDayClick" prefHeight="25.0" prefWidth="78.0" promptText="Day" />
+        <ComboBox fx:id="endYear" layoutX="166.0" layoutY="482.0" prefHeight="25.0" prefWidth="78.0" promptText="Year" />
+        <ComboBox fx:id="endMonth" layoutX="265.0" layoutY="482.0" prefHeight="25.0" prefWidth="92.0" promptText="Month" />
+        <ComboBox fx:id="endDay" layoutX="373.0" layoutY="482.0" prefHeight="25.0" prefWidth="78.0" promptText="Day" />
+        <Button fx:id="clearButton" layoutX="480.0" layoutY="74.0" mnemonicParsing="false" onAction="#clearClick" text="Clear" />
+        <Button fx:id="saveButton" layoutX="120.0" layoutY="661.0" mnemonicParsing="false" onAction="#saveClick" text="Save" />
+        <Button fx:id="cancelButton" layoutX="254.0" layoutY="661.0" mnemonicParsing="false" onAction="#cancelClick" text="Cancel" />
+        <Button fx:id="appointmentsButton" layoutX="364.0" layoutY="661.0" mnemonicParsing="false" onAction="#appointmentsClick" text="Appointments" />
+        <Button fx:id="customersButton" layoutX="468.0" layoutY="661.0" mnemonicParsing="false" onAction="#customersClick" text="Customers" />
+        <TextField fx:id="customerID" editable="false" layoutX="364.0" layoutY="530.0" prefHeight="25.0" prefWidth="194.0" text="Customer ID - Select Customer" />
+        <TextField fx:id="contactID" editable="false" layoutX="364.0" layoutY="319.0" prefHeight="25.0" prefWidth="194.0" text="Contact ID - Select Contact" />
+    </children>
+
+</AnchorPane>

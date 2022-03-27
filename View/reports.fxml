@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.reportsController">
+   <children>
+      <TableView fx:id="customerAppointmentTable" layoutX="26.0" layoutY="361.0" prefHeight="200.0" prefWidth="443.0">
+        <columns>
+          <TableColumn fx:id="appointmentMonth" prefWidth="133.0" text="Month and Year" />
+            <TableColumn fx:id="apptType" prefWidth="184.0" text="Type" />
+          <TableColumn fx:id="numberOfAppointments" prefWidth="124.0" text="Total Appointments" />
+        </columns>
+      </TableView>
+      <TableView fx:id="customerByLocation" layoutX="552.0" layoutY="300.0" prefHeight="261.0" prefWidth="234.0">
+        <columns>
+          <TableColumn fx:id="divisionID" prefWidth="89.0" text="Division ID" />
+            <TableColumn fx:id="division" prefWidth="75.0" text="Division" />
+            <TableColumn fx:id="total" prefWidth="68.0" text="Total" />
+        </columns>
+      </TableView>
+      <TableView fx:id="scheduleTable" layoutX="29.0" layoutY="71.0" prefHeight="200.0" prefWidth="578.0">
+        <columns>
+          <TableColumn fx:id="appointmentID" prefWidth="100.0" text="Appointment ID" />
+          <TableColumn fx:id="title" prefWidth="72.0" text="Title" />
+            <TableColumn fx:id="type" prefWidth="67.0" text="Type" />
+            <TableColumn fx:id="description" prefWidth="87.0" text="Description" />
+            <TableColumn fx:id="startColumn" prefWidth="75.0" text="Start" />
+            <TableColumn fx:id="endCol" prefWidth="78.0" text="End" />
+            <TableColumn fx:id="customerID" prefWidth="97.0" text="Customer ID " />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="radio1" layoutX="29.0" layoutY="37.0" mnemonicParsing="false" onAction="#radio1Selected" text="RadioButton">
+         <toggleGroup>
+            <ToggleGroup fx:id="contactName" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radio2" layoutX="155.0" layoutY="37.0" mnemonicParsing="false" onAction="#radio2Selected" text="RadioButton" toggleGroup="$contactName" />
+      <RadioButton fx:id="radio3" layoutX="272.0" layoutY="37.0" mnemonicParsing="false" onAction="#radio3Selected" text="RadioButton" toggleGroup="$contactName" />
+      <Button fx:id="appointmentsButton" layoutX="607.0" layoutY="654.0" mnemonicParsing="false" onAction="#appointmentsClick" text="All Appointments" />
+      <Button fx:id="customersButton" layoutX="472.0" layoutY="654.0" mnemonicParsing="false" onAction="#customersClick" text="All Customers" />
+      <RadioButton fx:id="byType" layoutX="29.0" layoutY="334.0" mnemonicParsing="false" onAction="#byTypeSelected" text="Count by Type">
+         <toggleGroup>
+            <ToggleGroup fx:id="typeOrMonth" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="byMonth" layoutX="155.0" layoutY="334.0" mnemonicParsing="false" onAction="#byMonthSelected" selected="true" text="Count by Month" toggleGroup="$typeOrMonth" />
+   </children>
+</AnchorPane>

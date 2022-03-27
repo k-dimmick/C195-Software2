@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.allAppointmentsController">
+   <children>
+      <TableView fx:id="appointmentTable" layoutX="4.0" layoutY="100.0" prefHeight="221.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="apptIDCol" prefWidth="75.0" text="Appointment ID" />
+          <TableColumn fx:id="titleCol" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="descCol" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="locationCol" prefWidth="75.0" text="Location" />
+            <TableColumn fx:id="typeCol" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="startCol" prefWidth="75.0" text="Start Date &amp; Time" />
+            <TableColumn fx:id="endCol" prefWidth="75.0" text="End Date &amp; Time" />
+            <TableColumn fx:id="contactIDCol" prefWidth="75.0" text="Contact ID" />
+            <TableColumn fx:id="custIDCol" prefWidth="75.0" text="Customer ID" />
+            <TableColumn fx:id="userIDCol" prefWidth="75.0" text="User ID" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="appointmentByWeek" layoutX="36.0" layoutY="71.0" mnemonicParsing="false" onAction="#apptByWeekSelected" text="Appointment By Week">
+         <toggleGroup>
+            <ToggleGroup fx:id="appointmentSort" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="appointmentByMonth" layoutX="197.0" layoutY="71.0" mnemonicParsing="false" onAction="#apptByMonthSelected" text="Appointment By Month" toggleGroup="$appointmentSort" />
+      <ButtonBar layoutY="353.0" prefHeight="40.0" prefWidth="591.0">
+        <buttons>
+          <Button fx:id="addAppointment" mnemonicParsing="false" onAction="#addAppointmentClick" prefHeight="25.0" prefWidth="161.0" text="Add Appointment" />
+            <Button fx:id="modifyAppointment" mnemonicParsing="false" onAction="#modifyAppointmentClick" text="Modify Appointment" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteClick" text="Delete Appointment" />
+        </buttons>
+      </ButtonBar>
+      <Label fx:id="dateTime" layoutX="94.0" layoutY="14.0" text="CurrentDateTime" />
+      <Button fx:id="viewCustomer" layoutX="425.0" layoutY="455.0" mnemonicParsing="false" onAction="#viewCustomerClick" text="View Customer Information" />
+      <Button fx:id="reportsButton" layoutX="314.0" layoutY="455.0" mnemonicParsing="false" onAction="#reportsClick" text="View Reports" />
+      <TextField fx:id="searchByLocation" layoutX="381.0" layoutY="68.0" onAction="#searchField" prefHeight="25.0" prefWidth="218.0" promptText="Search by Appointment Location" />
+   </children>
+</AnchorPane>
